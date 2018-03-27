@@ -1,0 +1,21 @@
+apply plugin: 'java-library'
+
+repositories {
+    jcenter()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+	baseName = 'hazelcast-tools'
+	version =  '1.0.0-SNAPSHOT'
+}
+
+dependencies {
+    implementation 'com.hazelcast:hazelcast-all:3.9.3'
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:2.7.21'
+    testImplementation 'org.assertj:assertj-core:3.9.0'
+}
